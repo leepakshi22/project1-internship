@@ -202,3 +202,12 @@ body {
     gap: 15px;
   }
 }
+
+@media (max-width: 600px) {
+  .video-section {
+    flex-direction: column; /* Stack items vertically */
+    width: 100%; /* Full width */
+    height: auto; /* Adjust height automatically */
+    margin: 20px 0; /* Reduce margin for smaller screens */
+  }
+}
