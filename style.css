@@ -1,4 +1,4 @@
-(.video-section {
+.video-section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,12 +17,21 @@ body {
   padding: 20px;
 }
 
+/* Light Theme */
+body.light {
+  background: #f5f7fa;
+  color: #222;
+}
+
+/* Dark Theme */
+body.dark {
+  background: #121212;
+  color: #f5f5f5;
+}
 
 
 
-
-
-
+/* Hero Section */
 .hero {
   font-family: "Special Gothic Expanded One", sans-serif;
   text-align: center;
@@ -40,7 +49,7 @@ body {
   color: #555;
 }
 
-
+/* Intro Gallery */
 .intro-gallery {
   display: flex;
   gap: 15px;
@@ -62,7 +71,7 @@ body {
   transform: scale(1.05);
 }
 
-
+/* About Section */
 .about {
   max-width: 700px;
   margin: 0 auto 40px;
@@ -72,7 +81,7 @@ body {
   border-radius: 12px;
 }
 
-
+/* Bucket List Sections */
 .bucket-section {
   margin: 30px 0;
 }
@@ -100,7 +109,7 @@ li i {
   margin-right: 10px;
 }
 
-
+/* Footer */
 footer {
   font-family: "Dancing Script", cursive;
   text-align: center;
@@ -109,7 +118,7 @@ footer {
   color: #777;
 }
 
-.roboto-slab-ab> {
+.roboto-slab-<abc> {
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -121,14 +130,14 @@ footer {
   font-style: normal;
 }
 
-.playfair-display-bc> {
+.playfair-display-<abc> {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
-.dancing-script-b> {
+.dancing-script-<abc> {
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -137,10 +146,10 @@ footer {
 
 body {
   background-image: url("background.jpg");
-  background-size: cover;         
-  background-position: center;    
-  background-repeat: no-repeat;   
-  background-attachment: fixed;  
+  background-size: cover;         /* fills the screen */
+  background-position: center;    /* centers the image */
+  background-repeat: no-repeat;   /* prevents tiling */
+  background-attachment: fixed;   /* keeps image in place while scrolling */
 }
 
 @media (max-width: 600px) {
@@ -151,5 +160,45 @@ body {
 
   .hero h1 {
     font-size: 2em;
+  }
+}
+
+/* Flexbox for 16:9 ratio on phone screens */
+@media (max-width: 600px) {
+  .video-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: auto;
+  }
+
+  .intro-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/* Flexbox for 16:9 ratio on laptops */
+@media (min-width: 601px) and (max-width: 1200px) {
+  .video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 16 / 9;
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .intro-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
   }
 }
