@@ -1,3 +1,158 @@
+/*(.video-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s, color 0.3s;
+  padding: 20px;
+}
+
+
+
+
+
+
+
+.hero {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+
+.intro-gallery {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0 40px 0;
+}
+
+.intro-gallery img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.intro-gallery img:hover {
+  transform: scale(1.05);
+}
+
+
+.about {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  background: rgba(0, 121, 107, 0.1);
+  border-left: 5px solid #00796b;
+  border-radius: 12px;
+}
+
+
+.bucket-section {
+  margin: 30px 0;
+}
+
+.bucket-section h2 {
+  font-family: "Roboto Slab", serif;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #630079;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+li i {
+  color: #ff9800;
+  margin-right: 10px;
+}
+
+
+footer {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 0.9em;
+  color: #777;
+}
+
+.roboto-slab-<abc> {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.special-gothic-expanded-one-regular {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.playfair-display-<bc> {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dancing-script-<ab> {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-image: url("background.jpg");
+  background-size: cover;         
+  background-position: center;    
+  background-repeat: no-repeat;   
+  background-attachment: fixed;  
+}
+
+@media (max-width: 600px) {
+  .intro-gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+}*/
 .video-section {
   display: flex;
   justify-content: center;
@@ -162,3 +317,44 @@ body {
     font-size: 2em;
   }
 }
+
+/* Flexbox for 16:9 ratio on phone screens */
+@media (max-width: 600px) {
+  .video-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: auto;
+  }
+
+  .intro-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/* Flexbox for 16:9 ratio on laptops */
+@media (min-width: 601px) and (max-width: 1200px) {
+  .video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 16 / 9;
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .intro-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+  }
+}
+
